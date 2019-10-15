@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ysw.demomybatis.Mapper.EmployeeMapper">
+    <!-- 指定与该配置文件匹配的接口  -->
+    <select id="getEmpById" resultType="com.ysw.demomybatis.Bean.Employee">
+        /*id与接口中的方法必须一致*/
+        SELECT * FROM employee WHERE id=#{id}
+    </select>
+    <insert id="addEmp">
+        insert into employee (lastName ,email ,gender ) values (#{lastName} ,#{email} ,#{gender})
+    </insert>
+</mapper>

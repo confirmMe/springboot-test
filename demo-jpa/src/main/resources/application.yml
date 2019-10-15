@@ -1,0 +1,13 @@
+spring:
+  datasource:
+     username: root
+     password: 123
+     type: com.alibaba.druid.pool.DruidDataSource
+     driver-class-name: com.mysql.jdbc.Driver
+     url: jdbc:mysql://127.0.0.1:3306/jdbc
+  jpa:
+    hibernate:
+      ddl-auto: update
+      #      更新或创建表结构
+    show-sql: true
+      #显示sql语句
